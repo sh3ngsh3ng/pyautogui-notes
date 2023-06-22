@@ -47,3 +47,13 @@ class Browser():
             self.bot.scroll(scroll_value)
             item_check = self.bot.locateOnScreen(item_image)
         self.bot.moveTo(self.bot.locateOnScreen(item_image))
+
+
+
+
+browser = Browser(bot)
+browser.open_browser()
+browser.go_to_url('mothership.sg')
+browser.wait_for_page('page_image.png')
+# browser.wait_for_page('error_screen.png')
+browser.scroll_to_view('item_image.png')
